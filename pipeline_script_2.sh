@@ -19,4 +19,4 @@ else
   pivnet-cli
 fi
 echo "curl pivotal.io"
-curl -I www.pivotal.io
+curl -k http://it-test-app:8085/api/PortTest/www.google.com/443
