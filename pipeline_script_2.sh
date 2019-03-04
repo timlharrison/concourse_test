@@ -18,5 +18,6 @@ else
   echo "show pivnet-cli man page"
   pivnet-cli
 fi
-echo "curl pivotal.io"
+echo "curl it-test-app"
 curl -k http://it-test-app:8085/api/PortTest/www.google.com/443
+nslookup it-test-app
