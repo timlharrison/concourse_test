@@ -10,7 +10,7 @@
 #chmod +x ./om-linux
 ls -l
 # Test existence of pivnet-cli and error if not found
-if ! type "wrong-pivnet-cli" > /dev/null
+if ! type "pivnet-cli" > /dev/null
 then
   echo "PIVNET-CLI NOT FOUND"
   exit 123
