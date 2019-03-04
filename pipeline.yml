@@ -6,10 +6,10 @@ resources:
     uri: https://github.com/timlharrison/concourse_test.git
 
 jobs:
-- name: job-test-app
+- name: script
   public: true
   plan:
   - get: resources
     trigger: true
-  - task: web-app-tests
-    file: resource-tutorial/tutorials/basic/job-inputs/task_run_tests.yml
+  - task: pipeline_script
+    file: resources/pipeline_task.yml
