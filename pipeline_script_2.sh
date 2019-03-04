@@ -10,6 +10,6 @@
 #chmod +x ./om-linux
 ls -l
 echo "show pivnet-cli man page"
-./pivnet-cli
+pivnet-cli
 echo "curl pivotal.io"
 curl -I www.pivotal.io
