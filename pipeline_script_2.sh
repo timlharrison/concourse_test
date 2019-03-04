@@ -11,5 +11,5 @@
 ls -l
 echo "show pivnet-cli man page"
 ./pivnet-cli
-echo "curl google.com"
+echo "curl pivotal.io"
 curl -I www.pivotal.io
