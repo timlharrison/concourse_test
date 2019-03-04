@@ -13,3 +13,5 @@ echo "show pivnet-cli man page"
 pivnet-cli
 echo "curl pivotal.io"
 curl -I www.pivotal.io
+echo "Error!"
+exit 123
