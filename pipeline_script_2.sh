@@ -9,9 +9,12 @@
 #echo "setting permissions on om cli"
 #chmod +x ./om-linux
 ls -l
-echo "show pivnet-cli man page"
-pivnet-cli
+if ! type "pivnet-cli" > /dev/null; then
+  echo "PIVNET-CLI NOT FOUND"
+  exit 123
+else
+  echo "show pivnet-cli man page"
+  pivnet-cli
+fi
 echo "curl pivotal.io"
 curl -I www.pivotal.io
-echo "Error!"
-exit 123
