@@ -1,0 +1,20 @@
+---
+resources:
+- name: resources
+  type: git
+  source:
+    uri: https://github.com/timlharrison/concourse_test.git
+- name: timer
+  type: time
+  source:
+    interval: 2m
+
+jobs:
+- name: script
+  public: true
+  plan:
+  - get: resources
+  - get: timer
+    trigger: true
+  - task: pipeline_script
+    file: resources/pipeline_task_2.yml

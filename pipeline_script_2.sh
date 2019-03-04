@@ -9,7 +9,7 @@
 #echo "setting permissions on om cli"
 #chmod +x ./om-linux
 ls -l
-echo "show om CLI man page"
-om-linux
+echo "show pivnet-cli man page"
+./pivnet-cli
 echo "curl google.com"
-curl -I www.google.com
+curl -I www.pivotal.io
