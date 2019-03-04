@@ -19,5 +19,5 @@ else
   pivnet-cli
 fi
 echo "curl it-test-app"
-curl -k http://it-test-app:8085/api/PortTest/www.google.com/443
+curl -k http://it-test-app:8085/api/PortTest/www.google.com/443 | jq
 #nslookup it-test-app
