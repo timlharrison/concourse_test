@@ -9,7 +9,8 @@
 #echo "setting permissions on om cli"
 #chmod +x ./om-linux
 ls -l
-if ! type "pivnet-cli" > /dev/null; then
+if ! type "pivnet-cli" > /dev/null
+then
   echo "PIVNET-CLI NOT FOUND"
   exit 123
 else
