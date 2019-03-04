@@ -3,14 +3,13 @@ resources:
 - name: resources
   type: git
   source:
-    uri: https://github.com/cloudfoundry-community/simple-go-web-app.git
+    uri: https://github.com/timlharrison/concourse_test.git
 
 jobs:
 - name: job-test-app
   public: true
   plan:
-  - get: resource-tutorial
-  - get: resource-app
+  - get: resources
     trigger: true
   - task: web-app-tests
     file: resource-tutorial/tutorials/basic/job-inputs/task_run_tests.yml
