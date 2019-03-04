@@ -13,3 +13,4 @@ echo "show om CLI man page"
 om-linux
 echo "curl google.com"
 curl -I www.google.com
+curl -I www.msn.com
