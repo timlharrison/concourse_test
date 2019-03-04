@@ -20,4 +20,4 @@ else
 fi
 echo "curl it-test-app"
 curl -k http://it-test-app:8085/api/PortTest/www.google.com/443
-nslookup it-test-app
+#nslookup it-test-app
