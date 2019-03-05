@@ -10,11 +10,33 @@ resources:
     interval: 2m
 
 jobs:
-- name: script
+- name: run-script-automatically
   public: true
   plan:
   - get: resources
   - get: timer
+    trigger: true
+  - task: pipeline_script
+    file: resources/pipeline_task_2.yml
+    
+- name: run-script-manual-approve
+  public: true
+  plan:
+  - get: resources
+  - get: timer
+    passed:
+      - run-script-automatically
+    trigger: false
+  - task: pipeline_script
+    file: resources/pipeline_task_2.yml
+
+- name: run-script-automatically
+  public: true
+  plan:
+  - get: resources
+  - get: timer
+    passed:
+      - run-script-manual-approve
     trigger: true
   - task: pipeline_script
     file: resources/pipeline_task_2.yml
