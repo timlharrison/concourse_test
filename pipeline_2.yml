@@ -30,7 +30,7 @@ jobs:
   - task: pipeline_script
     file: resources/pipeline_task_2.yml
 
-- name: run-script-automatically
+- name: run-script-automatically-2
   public: true
   plan:
   - get: resources
