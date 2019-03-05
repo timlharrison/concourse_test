@@ -32,7 +32,6 @@ jobs:
   public: true
   plan:
   - get: resources
-  - get: timer
     passed:
       - run-script-automatically-pre-1
       - run-script-automatically-pre-2
@@ -44,7 +43,6 @@ jobs:
   public: true
   plan:
   - get: resources
-  - get: timer
     passed:
       - run-script-manual-approve
     trigger: true
@@ -55,7 +53,6 @@ jobs:
   public: true
   plan:
   - get: resources
-  - get: timer
     passed:
       - run-script-manual-approve
     trigger: true
